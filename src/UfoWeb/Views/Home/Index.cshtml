@@ -1,0 +1,28 @@
+﻿@model HomeViewModel
+
+@{
+  ViewData["Title"] = "UFO sightings by State";
+}
+
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+      <tr>
+        <th>State</th>
+        <th>Sightings</th>
+      </tr>
+      </thead>
+      <tbody>
+      @foreach (var (state, count) in Model.Data.OrderByDescending(p => p.Value))
+      {
+        <tr>
+          <td>@state</td>
+          <td>@count</td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
+
