@@ -4,7 +4,8 @@ namespace Parsers
 {
     public class SplitParser
     {
-        public bool TryGetField(string line, int index, [NotNullWhen(true)] out string? value)
+        public bool TryGetField(string line, int index,
+            [NotNullWhen(true)] out string? value)
         {
             var parts = line.Split(',');
 
