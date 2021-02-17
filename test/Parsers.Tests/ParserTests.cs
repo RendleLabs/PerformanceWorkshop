@@ -16,5 +16,13 @@ namespace Parsers.Tests
             Assert.True(target.TryGetField(Line, 2, out var actual));
             Assert.Equal("NM", actual);
         }
+        
+        [Fact]
+        public void ReadParserWorks()
+        {
+            var target = new ReadParser();
+            Assert.True(target.TryGetField(Line, 2, out var actual));
+            Assert.Equal("NM", actual);
+        }
     }
 }

@@ -5,6 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="App.Metrics.AspNetCore.All" Version="4.2.0-preview.0.27" />
+    <PackageReference Include="App.Metrics.Reporting.InfluxDB" Version="4.2.0-preview.0.27" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\JaegerTracing\JaegerTracing.csproj" />
     <ProjectReference Include="..\Parsers\Parsers.csproj" />
   </ItemGroup>
 

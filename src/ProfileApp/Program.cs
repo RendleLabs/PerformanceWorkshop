@@ -15,9 +15,10 @@ namespace ProfileApp
         {
             var directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var csvPath = Path.Combine(directory!, "Data", "nuforc_ufo_records.csv");
+
             await using var stream = File.OpenRead(csvPath);
 
-            var states = await Aggregator.UseStreamReader(stream);
+            var states = await Aggregator.UsePipelines(stream);
             
             foreach (var state in states.Keys.OrderBy(k => k))
             {
